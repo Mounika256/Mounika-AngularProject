@@ -1,0 +1,8 @@
+<h1>Navbar!!</h1>
+<button class="login-btn" (click) = "getNavbar()">Login</button>
+<nav class="nav-con" *ngIf="isLoggedIn">
+    <h1 (click)="navigateToPage('/home')" [ngClass]="{'/home' : 'is-active'}[currentPath]">Home</h1>
+    <h1 (click)="navigateToPage('/fetchImages')" [ngClass]="{'/fetchImages' : 'is-active'}[currentPath]">Fetch Images</h1>
+    <h1 (click)="navigateToPage('/reactiveForms')" [ngClass]="{'/reactiveForms' : 'is-active'}[currentPath]">Reactive Forms</h1>
+    <button class="logout-btn" (click)="logoutBtn()">{{logoutIcon}} Logout</button>
+</nav>

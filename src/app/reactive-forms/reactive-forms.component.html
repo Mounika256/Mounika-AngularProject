@@ -1,0 +1,29 @@
+<h3>Reactive Forms</h3>
+<form class="p-2" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+
+    <label for="userName">UserName: </label>
+    <input id="userName" type="text" formControlName="userName">
+    <br/>
+
+    <label for="password">Password: </label>
+    <input id="password" type="password" formControlName="password">
+    <br/>
+
+    <label for="email">Email: </label>
+    <input id="email" type="email" formControlName="email">
+    <br/>
+    <p>Address: </p>
+    <div formGroupName="address">
+        <label for="cityName">City Name: </label>
+        <input id="cityName" type="text" formControlName="cityName">
+        <br/>
+        <label for="zipCode">Zip Code: </label>
+        <input id="zipCode" type="number" formControlName="zipCode">
+    </div>
+
+    <button type="submit" class="rf-submit">SUBMIT</button>
+    <button class="rf-submit" (click)="pathMyForm()">Patch</button>
+    <button class="rf-submit" (click)="clearData()">Clear</button>
+</form>
+
+{{reactiveForm.value | json}}

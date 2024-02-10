@@ -1,0 +1,8 @@
+<p>fetch-images works!</p>
+<button (click)="getApiData()">Get Data</button>
+<br/>
+<p>Gender: {{getData?.gender}} - &nbsp; 
+    <span class="name-text">Full Name: {{getData?.name?.title}} {{getData?.name?.first}} {{getData?.name?.last}}</span>
+</p>
+<img [src]="getData?.picture?.large" alt="image" />
+<!-- {{getData | json}} -->

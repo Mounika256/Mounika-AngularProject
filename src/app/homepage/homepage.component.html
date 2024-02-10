@@ -1,0 +1,14 @@
+<h1>Todo List</h1>
+<form #userForm="ngForm">
+	<div>
+		<input id="task" 
+           name="task"
+           value="task"
+           type="text" 
+           [(ngModel)]="task"
+        />
+        <button type="button" class="add-btn" (click)="addTasks()">Add</button>
+  </div>
+</form>
+
+{{todoSrvc.tasks | json}}
